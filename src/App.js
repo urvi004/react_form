@@ -23,7 +23,14 @@ function App() {
       const {value, name} = event.target;
       
       setFullName((preValue) => {
-        if (name=== 'fName'){
+
+        return{
+          ...preValue,
+          [name]: value
+        };
+
+
+        {/*if (name=== 'fName'){
           return{
             fName: value,
           lName: preValue.lName,
@@ -54,7 +61,7 @@ function App() {
             email: preValue.email,
             phone: value
         }
-      }
+      }*/}
         //console.log(preValue);
       });
 
